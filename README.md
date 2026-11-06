@@ -52,7 +52,22 @@ npm test           # 풀이기 1000회 + 실수 진단 테스트
 npm run build:single   # 모든 파일을 한 HTML로 묶기 (dist/)
 ```
 
-**폰/패드에서 쓰기**: GitHub 저장소 Settings → Pages → *Deploy from a branch*에서 `main` / `/ (root)`를 고르면 `https://<아이디>.github.io/cube/` 주소가 생겨요. 그 주소를 사파리/크롬에서 열고 **홈 화면에 추가**하면 앱처럼 쓸 수 있어요. 한 번 열면 오프라인에서도 동작해요.
+## 웹사이트로 공개하기 (GitHub Pages)
+
+주소: **https://danikim8765-collab.github.io/cube/**
+
+처음 한 번만 설정하면 돼요:
+
+1. GitHub 저장소 → **Settings** → 왼쪽 **Pages**
+2. **Source**: `Deploy from a branch`
+3. **Branch**: `main` (또는 작업 브랜치) · 폴더 `/ (root)` → **Save**
+4. 1~2분 뒤 위 주소로 접속
+
+이후로는 그 브랜치에 push할 때마다 사이트가 자동으로 갱신돼요.
+
+- 카카오톡·SNS에 링크를 공유하면 미리보기 카드(`icons/og-image.png`)가 나와요.
+- 폰/패드에서 사이트를 열고 **홈 화면에 추가**하면 앱처럼 쓸 수 있고, 한 번 열면 오프라인에서도 동작해요.
+- 저장소 이름이나 계정이 바뀌면 `index.html`, `robots.txt`, `sitemap.xml`, `404.html`의 주소를 바꿔 주세요.
 
 > 표준 색 배치(흰↔노랑, 초록↔파랑, 빨강↔주황, 흰 위·초록 앞일 때 빨강이 오른쪽) 큐브를 기준으로 해요.
 

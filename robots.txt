@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://danikim8765-collab.github.io/cube/sitemap.xml

@@ -1,7 +1,7 @@
 /* 오프라인 캐시: 앱 파일을 저장해 두고, 온라인이면 최신 파일로 갱신 */
-const CACHE = 'cube-coach-v1';
+const CACHE = 'cube-coach-v2';
 const FILES = [
-  './', 'index.html', 'css/app.css', 'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png',
+  './', 'index.html', '404.html', 'css/app.css', 'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png',
   'js/cube.js', 'js/solver.js', 'js/diagnose.js', 'js/content.js', 'js/store.js', 'js/view3d.js', 'js/input.js', 'js/app.js',
 ];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting())); });
