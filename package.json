@@ -1,0 +1,10 @@
+{
+  "name": "cube-coach",
+  "private": true,
+  "description": "3x3 루빅스 큐브 초보 코치 웹앱 (빌드 불필요한 정적 사이트)",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node tests/solver.test.js 1000 && node tests/diagnose.test.js",
+    "build:single": "python3 tools/build_single.py dist/cube-coach.html"
+  }
+}

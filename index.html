@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>큐브 코치</title>
+<meta name="description" content="완전 초보도 코치와 함께 3x3 큐브를 처음부터 끝까지 맞추는 웹앱">
+<meta name="theme-color" content="#2b50d8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="큐브 코치">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&family=Jua&family=JetBrains+Mono:wght@600;800&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app" id="app">
+  <header class="topbar">
+    <button class="brand" id="homeBtn" type="button" aria-label="처음 화면으로">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>큐브 코치</span>
+    </button>
+    <ol class="rail" id="rail" aria-label="풀이 7단계"></ol>
+    <button class="icon-btn" id="menuBtn" type="button" aria-label="메뉴">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+    </button>
+  </header>
+  <nav class="menu" id="menu" hidden>
+    <button type="button" data-go="home">처음 화면</button>
+    <button type="button" data-go="new">새 큐브로 시작</button>
+    <button type="button" data-go="basics">큐브와 친해지기 (기호)</button>
+    <button type="button" data-go="explore">더 배우기 · 다른 방법</button>
+    <button type="button" data-go="playground">공식 연습장</button>
+    <button type="button" data-go="progress">나의 학습 기록</button>
+  </nav>
+  <main class="layout">
+    <section class="stage" id="stage" aria-live="polite"></section>
+    <section class="coach" aria-label="코치">
+      <div class="chat" id="chat"></div>
+    </section>
+  </main>
+  <div class="actions" id="actions"></div>
+</div>
+<noscript>이 앱은 자바스크립트가 필요해요.</noscript>
+<script src="js/cube.js"></script>
+<script src="js/solver.js"></script>
+<script src="js/diagnose.js"></script>
+<script src="js/content.js"></script>
+<script src="js/store.js"></script>
+<script src="js/view3d.js"></script>
+<script src="js/input.js"></script>
+<script src="js/app.js"></script>
+<script>
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    navigator.serviceWorker.register('sw.js').catch(function () {});
+  }
+</script>
+</body>
+</html>
